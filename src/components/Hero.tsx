@@ -1,0 +1,87 @@
+import { Button } from "@/components/ui/button";
+import { MapPin, Shield, BarChart3 } from "lucide-react";
+
+const Hero = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-[image:var(--gradient-hero)] opacity-95" />
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-secondary rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 backdrop-blur-sm">
+            <span className="text-accent font-semibold">Leader en Afrique</span>
+            <span className="text-primary-foreground">• 22 pays • 40 000+ véhicules</span>
+          </div>
+
+          {/* Main heading */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+            Solutions de Gestion de Flottes{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
+              Connectées
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
+            Tracking, Fleet Management, Analyse de Conduite et Vidéo Embarquée pour sécuriser et optimiser votre flotte en Afrique
+          </p>
+
+          {/* Features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8">
+            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20">
+              <MapPin className="w-8 h-8 text-accent" />
+              <h3 className="font-semibold text-primary-foreground">Tracking GPS</h3>
+              <p className="text-sm text-primary-foreground/80">Localisation en temps réel</p>
+            </div>
+            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20">
+              <Shield className="w-8 h-8 text-accent" />
+              <h3 className="font-semibold text-primary-foreground">Sécurisation</h3>
+              <p className="text-sm text-primary-foreground/80">Blocage à distance</p>
+            </div>
+            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20">
+              <BarChart3 className="w-8 h-8 text-accent" />
+              <h3 className="font-semibold text-primary-foreground">Optimisation</h3>
+              <p className="text-sm text-primary-foreground/80">Réduction des coûts</p>
+            </div>
+          </div>
+
+          {/* CTA buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <Button
+              size="lg"
+              onClick={scrollToContact}
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg"
+            >
+              Demander une Démo
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+              className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-lg"
+            >
+              Découvrir nos Solutions
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
