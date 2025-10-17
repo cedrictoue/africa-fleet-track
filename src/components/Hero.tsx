@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Logo */}
           <div className="flex justify-center mb-6">
-            <img src={logo} alt="Mapping Contrôle Afrique" className="h-20 md:h-24 w-auto" />
+            <img src={logo} alt="Mapping Contrôle Afrique" className="w-full max-w-3xl h-auto" />
           </div>
           
           {/* Badge */}
