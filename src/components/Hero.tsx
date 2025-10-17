@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-[image:var(--gradient-hero)] opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-secondary/5 to-accent/10" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
@@ -31,11 +31,11 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 backdrop-blur-sm">
             <span className="text-accent font-semibold">Leader en Afrique</span>
-            <span className="text-primary-foreground">• 22 pays • 40 000+ véhicules</span>
+            <span className="text-foreground">• 22 pays • 40 000+ véhicules</span>
           </div>
 
           {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
             Solutions de Gestion de Flottes{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
               Connectées
@@ -43,26 +43,26 @@ const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Tracking, Fleet Management, Analyse de Conduite et Vidéo Embarquée pour sécuriser et optimiser votre flotte en Afrique
           </p>
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8">
-            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20">
+            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-card backdrop-blur-sm border border-border shadow-sm">
               <MapPin className="w-8 h-8 text-accent" />
-              <h3 className="font-semibold text-primary-foreground">Tracking GPS</h3>
-              <p className="text-sm text-primary-foreground/80">Localisation en temps réel</p>
+              <h3 className="font-semibold text-foreground">Tracking GPS</h3>
+              <p className="text-sm text-muted-foreground">Localisation en temps réel</p>
             </div>
-            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20">
+            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-card backdrop-blur-sm border border-border shadow-sm">
               <Shield className="w-8 h-8 text-accent" />
-              <h3 className="font-semibold text-primary-foreground">Sécurisation</h3>
-              <p className="text-sm text-primary-foreground/80">Blocage à distance</p>
+              <h3 className="font-semibold text-foreground">Sécurisation</h3>
+              <p className="text-sm text-muted-foreground">Blocage à distance</p>
             </div>
-            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20">
+            <div className="flex flex-col items-center gap-3 p-6 rounded-xl bg-card backdrop-blur-sm border border-border shadow-sm">
               <BarChart3 className="w-8 h-8 text-accent" />
-              <h3 className="font-semibold text-primary-foreground">Optimisation</h3>
-              <p className="text-sm text-primary-foreground/80">Réduction des coûts</p>
+              <h3 className="font-semibold text-foreground">Optimisation</h3>
+              <p className="text-sm text-muted-foreground">Réduction des coûts</p>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-lg"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg"
             >
               Découvrir nos Solutions
             </Button>
