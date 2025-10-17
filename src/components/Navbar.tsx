@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import icon from "@/assets/icon.png";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,38 +15,44 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <img src={icon} alt="Mapping Contrôle Afrique" className="h-12 w-auto" />
+            <img src={logo} alt="Mapping Control Afrique" className="h-10 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-secondary transition-colors"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("clients")}
-              className="text-foreground hover:text-secondary transition-colors"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Clients
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-secondary transition-colors"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
               À Propos
             </button>
-            <Button
+            <button
               onClick={() => scrollToSection("contact")}
-              className="bg-gradient-to-r from-secondary to-accent text-white hover:opacity-90"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Contact
+            </button>
+            <Button
+              onClick={() => scrollToSection("contact")}
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
+            >
+              Demander une Démo
             </Button>
           </div>
 
@@ -84,11 +90,17 @@ const Navbar = () => {
             >
               À Propos
             </button>
-            <Button
+            <button
               onClick={() => scrollToSection("contact")}
-              className="w-full bg-gradient-to-r from-secondary to-accent text-white"
+              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-md"
             >
               Contact
+            </button>
+            <Button
+              onClick={() => scrollToSection("contact")}
+              className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
+            >
+              Demander une Démo
             </Button>
           </div>
         )}

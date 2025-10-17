@@ -1,70 +1,71 @@
-import { Navigation, Video, BarChart3, Shield, Wrench, Phone } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { MapPin, Shield, Video, BarChart3, Wrench, Headphones } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Navigation,
+      icon: MapPin,
       title: "Tracking GPS",
-      description: "Suivi en temps réel de vos véhicules et équipements avec historique complet des déplacements"
+      description: "Suivi en temps réel de votre flotte avec géolocalisation précise, historique des trajets et alertes intelligentes"
     },
     {
       icon: Shield,
       title: "Sécurisation",
-      description: "Blocage moteur à distance en cas de vol ou d'impayé pour protéger vos investissements"
+      description: "Protection avancée avec blocage moteur à distance, alertes anti-vol et zones de sécurité personnalisées"
     },
     {
       icon: BarChart3,
       title: "Fleet Management",
-      description: "Optimisation de votre flotte avec rapports détaillés, analyse de consommation et réduction des coûts"
+      description: "Optimisation complète de la gestion avec tableaux de bord, rapports détaillés et analyses de performance"
     },
     {
       icon: Video,
       title: "Vidéo Embarquée",
-      description: "Solutions de vidéosurveillance pour véhicules avec enregistrement et transmission en temps réel"
+      description: "Caméras HD intelligentes avec enregistrement continu, détection d'événements et accès à distance"
     },
     {
       icon: Wrench,
       title: "Suivi d'Entretien",
-      description: "Gestion automatisée des maintenances avec alertes et historique pour prolonger la durée de vie"
+      description: "Planification automatique des maintenances, alertes préventives et suivi complet de l'historique"
     },
     {
-      icon: Phone,
+      icon: Headphones,
       title: "Support Dédié",
-      description: "Équipe francophone experte disponible pour vous accompagner au quotidien"
+      description: "Accompagnement personnalisé 24/7 en français avec formation complète et assistance technique"
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nos Solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Des technologies de pointe adaptées au contexte africain pour sécuriser et optimiser votre flotte
+            Des technologies de pointe pour une gestion optimale de votre flotte
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-secondary/50">
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-secondary to-accent group-hover:scale-110 transition-transform">
-                    <service.icon className="w-6 h-6 text-white" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4">
+                    <Icon className="w-8 h-8 text-primary" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

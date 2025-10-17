@@ -1,73 +1,59 @@
-import { Users, MapPin, Building2, TrendingUp } from "lucide-react";
+import { Globe2, Car, Users, Award } from "lucide-react";
 
 const Stats = () => {
   const stats = [
     {
-      icon: MapPin,
+      icon: Globe2,
       value: "22",
-      label: "Pays en Afrique",
-      description: "Présence établie"
+      label: "pays couverts",
+      description: "Présence continentale forte"
+    },
+    {
+      icon: Car,
+      value: "40 000+",
+      label: "véhicules suivis",
+      description: "Flotte connectée en temps réel"
     },
     {
       icon: Users,
-      value: "40 000+",
-      label: "Véhicules Suivis",
-      description: "En temps réel"
-    },
-    {
-      icon: Building2,
       value: "500+",
-      label: "Clients Actifs",
-      description: "Entreprises & Institutions"
+      label: "clients actifs",
+      description: "Partenaires de confiance"
     },
     {
-      icon: TrendingUp,
+      icon: Award,
       value: "15+",
-      label: "Années d'Expertise",
-      description: "Sur le marché africain"
+      label: "ans d'expertise",
+      description: "Leader du marché africain"
     }
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Notre Impact en Chiffres
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Leader incontesté de la gestion de flottes connectées en Afrique
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="group relative p-8 rounded-2xl bg-card border border-border hover:border-secondary/50 transition-all duration-300 hover:shadow-xl"
-            >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              <div className="relative space-y-4">
-                <div className="inline-flex p-3 rounded-xl bg-gradient-to-br from-secondary to-accent">
-                  <stat.icon className="w-6 h-6 text-white" />
+          {stats.map((stat, index) => {
+            const Icon = stat.icon;
+            return (
+              <div
+                key={index}
+                className="text-center p-8 rounded-2xl bg-white border border-border shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+              >
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 mb-6">
+                  <Icon className="w-10 h-10 text-primary" />
                 </div>
-                
-                <div>
-                  <div className="text-4xl font-bold text-foreground mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-lg font-semibold text-foreground mb-1">
-                    {stat.label}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {stat.description}
-                  </div>
+                <div className="text-5xl font-bold text-foreground mb-3">
+                  {stat.value}
                 </div>
+                <div className="text-base font-semibold text-foreground mb-2">
+                  {stat.label}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {stat.description}
+                </p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
