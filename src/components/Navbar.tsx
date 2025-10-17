@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import icon from "@/assets/icon.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <img src={logo} alt="Mapping Contrôle Afrique" className="h-12 w-auto" />
+            <img src={icon} alt="Mapping Contrôle Afrique" className="h-12 w-auto" />
           </div>
 
           {/* Desktop Navigation */}

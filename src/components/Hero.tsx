@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Shield, BarChart3 } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -22,6 +23,11 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Mapping Contrôle Afrique" className="h-20 md:h-24 w-auto brightness-0 invert" />
+          </div>
+          
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 backdrop-blur-sm">
             <span className="text-accent font-semibold">Leader en Afrique</span>
