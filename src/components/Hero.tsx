@@ -25,7 +25,7 @@ const Hero = () => {
           <div className="space-y-8">
             {/* Logo */}
             <div className="mb-6">
-              <img src={logo} alt="Mapping Control Afrique" className="h-16 w-auto" />
+              <img src={logo} alt="Mapping Control Afrique" className="h-24 w-auto" />
             </div>
 
             {/* Main heading */}
