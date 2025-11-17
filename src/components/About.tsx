@@ -50,7 +50,7 @@ const About = () => {
                 Notre Différence
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Une technologie européenne, enrichie par une connaissance approfondie des usages africains : déploiements multi-pays, formations multilingues, support local réactif et capacité d'adaptation terrain.
+                Des technologies enrichies par une connaissance approfondie des usages africains : déploiements multi-pays, formations multilingues, support local réactif et capacité d'adaptation terrain.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Nous ne vendons pas une plateforme : nous accompagnons nos clients sur la durée, avec engagement et transparence.
@@ -68,8 +68,8 @@ const About = () => {
           value: "20 000+",
           label: "Véhicules actifs suivis"
         }, {
-          value: "Plus de 10 000",
-          label: "Interventions réalisées ou supervisées / an"
+          value: "+10 000",
+          label: "Interventions par an"
         }, {
           value: "15",
           label: "Années d'expérience terrain"

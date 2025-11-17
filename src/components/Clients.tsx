@@ -39,8 +39,6 @@ const Clients = () => {
       description: "Renforcez la sécurité de vos parcs et enrichissez votre offre commerciale grâce à des services connectés à forte valeur ajoutée.",
       image: dealershipImage,
       benefits: [
-        "Sécurisation intelligente des stocks neufs et d'occasion",
-        "Démonstrateurs connectés pour vos équipes de vente",
         "Services GPS intégrés dans vos offres commerciales",
         "Suivi après-vente simplifié et fidélisation renforcée",
         "Réduction des vols et usages non autorisés"
@@ -52,10 +50,9 @@ const Clients = () => {
       description: "Des solutions simples, fiables et abordables pour aider les PME à garder le contrôle sur leurs véhicules et sécuriser leurs opérations au quotidien.",
       image: smeImage,
       benefits: [
-        "Tarification adaptée aux PME",
         "Installation rapide et formation incluse",
         "Suivi en temps réel pour limiter les abus",
-        "Support en français 24/7",
+        "Support en français/anglais  24/7",
         "Solution évolutive selon votre croissance"
       ]
     }
