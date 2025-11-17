@@ -25,26 +25,26 @@ All colors MUST be HSL.
     --secondary: 123 41% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Light blue accent */
-    --accent: 207 76% 52%;
+    /* Accent color harmonized with primary */
+    --accent: 211 79% 30%;
     --accent-foreground: 0 0% 100%;
 
     --muted: 210 20% 97%;
-    --muted-foreground: 210 12% 45%;
+    --muted-foreground: 211 15% 40%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 199 72% 61%;
+    --border: 211 20% 88%;
+    --input: 211 20% 88%;
+    --ring: 211 79% 23%;
 
     --radius: 0.75rem;
     
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(207 76% 52%) 0%, hsl(207 76% 62%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(123 41% 45%) 0%, hsl(123 41% 55%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 97%) 100%);
+    /* Custom gradients harmonized with #0c3868 */
+    --gradient-hero: linear-gradient(135deg, hsl(211 79% 23%) 0%, hsl(211 79% 35%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(123 41% 45%) 0%, hsl(211 79% 23%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(211 15% 97%) 100%);
 
     --sidebar-background: 0 0% 98%;
 
