@@ -4,26 +4,26 @@ const Stats = () => {
   const stats = [
     {
       icon: Globe2,
-      value: "22",
-      label: "pays couverts",
+      value: "25+",
+      label: "Pays accompagnés",
       description: "Présence continentale forte"
     },
     {
       icon: Car,
-      value: "40 000+",
-      label: "véhicules suivis",
+      value: "10 000+",
+      label: "Véhicules actifs suivis",
       description: "Flotte connectée en temps réel"
     },
     {
       icon: Users,
-      value: "500+",
-      label: "clients actifs",
+      value: "5 000+",
+      label: "Déploiements & interventions terrain",
       description: "Partenaires de confiance"
     },
     {
       icon: Award,
-      value: "15+",
-      label: "ans d'expertise",
+      value: "8+",
+      label: "Années d'expérience",
       description: "Leader du marché africain"
     }
   ];
