@@ -10,8 +10,26 @@ const About = () => {
             À Propos de Mapping Control Afrique
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Leader africain en solutions de gestion de flottes connectées
+            Leader africain des solutions de gestion de flottes connectées
           </p>
+        </div>
+
+        {/* Main paragraph */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
+            <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+              Mapping Control Afrique est née au cœur de l'opérationnel : anciennement filiale Afrique d'Optimum Automotive, l'un des pionniers européens de la télématique, la société est devenue indépendante en 2025.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+              Nous combinons aujourd'hui la puissance d'une technologie européenne éprouvée avec une expertise africaine unique, construite au fil de plus de huit années de déploiements terrain dans plus de 25 pays.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+              Nous accompagnons banques, concessionnaires, groupes industriels, transporteurs, PME et acteurs publics dans la transformation et la sécurisation de leurs flottes, avec une approche résolument orientée résultats : réduction des coûts, amélioration de la productivité, conformité opérationnelle et protection des collaborateurs.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Notre force repose sur une équipe locale dédiée, représentant plus de 70 % de nos effectifs : support, opérations, qualité, intégration et accompagnement utilisateurs. C'est ce qui fait de nous un partenaire durable, fiable et proche des réalités quotidiennes.
+            </p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -31,9 +49,7 @@ const About = () => {
                 Notre Mission
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Accompagner les décideurs à protéger leurs investissements grâce à des solutions 
-                fiables, évolutives et adaptées aux réalités africaines. Nous transformons la gestion 
-                de flotte en un avantage compétitif pour nos clients.
+                Permettre aux décideurs africains d'améliorer la performance, la sécurité et la visibilité de leurs flottes grâce à des solutions fiables, évolutives et adaptées aux conditions réelles du terrain. Nous transformons la gestion de flotte en un avantage stratégique.
               </p>
             </div>
 
@@ -41,10 +57,11 @@ const About = () => {
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 Notre Différence
               </h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Une technologie européenne, enrichie par une connaissance approfondie des usages africains : déploiements multi-pays, formations multilingues, support local réactif et capacité d'adaptation terrain.
+              </p>
               <p className="text-muted-foreground leading-relaxed">
-                Une présence dans 22 pays, une expertise de plus de 15 ans et un support multilingue 
-                disponible 24h/24. Nous ne nous contentons pas de vendre une technologie : nous 
-                offrons un partenariat durable pour votre réussite.
+                Nous ne vendons pas une plateforme : nous accompagnons nos clients sur la durée, avec engagement et transparence.
               </p>
             </div>
           </div>
@@ -53,10 +70,10 @@ const About = () => {
         {/* Stats circles */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: "200+", label: "Pays couverts" },
-            { value: "40K+", label: "Véhicules suivis" },
-            { value: "40K+", label: "Interventions" },
-            { value: "10+", label: "Années d'expertise" },
+            { value: "25+", label: "Pays accompagnés" },
+            { value: "10 000+", label: "Véhicules actifs suivis" },
+            { value: "5 000+", label: "Interventions & projets complétés" },
+            { value: "8+", label: "Années d'expérience terrain" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="w-32 h-32 mx-auto rounded-full bg-primary flex items-center justify-center mb-4">
