@@ -22,13 +22,13 @@ const Clients = () => {
     {
       icon: Car,
       title: "Concessionnaires Automobiles",
-      description: "Protégez votre stock et offrez plus de sécurité à vos clients.",
+      description: "Différenciez-vous avec des services à valeur ajoutée et optimisez vos ateliers.",
       image: dealershipImage,
       benefits: [
-        "Sécurisation du stock de véhicules neufs et d'occasion",
-        "Offre de services de tracking à vos acheteurs",
-        "Valorisation de votre proposition commerciale",
-        "Suivi après-vente simplifié"
+        "Services connectés premium pour vos clients",
+        "Offre différenciée face à la concurrence",
+        "Données d'usage pour anticiper les besoins d'entretien",
+        "Optimisation des passages en atelier grâce à l'analyse prédictive"
       ]
     },
     {
