@@ -65,7 +65,7 @@ const About = () => {
           value: "25+",
           label: "Pays accompagnés"
         }, {
-          value: "10 000+",
+          value: "20 000+",
           label: "Véhicules actifs suivis"
         }, {
           value: "5 000+",
