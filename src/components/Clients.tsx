@@ -10,49 +10,53 @@ const Clients = () => {
     {
       icon: Building2,
       title: "Banques & Institutions Financières",
-      description: "Sécurisez vos financements automobiles et suivez vos parcs en temps réel.",
+      description: "Sécurisez vos financements automobiles et gardez une visibilité totale sur les véhicules financés ou mis en garantie, partout en Afrique. Nos technologies renforcent votre gestion du risque.",
       image: bankImage,
       benefits: [
-        "Géolocalisation en temps réel des véhicules financés",
-        "Alertes immédiates en cas de déplacement anormal",
-        "Rapports détaillés sur l'usage et l'état du véhicule",
-        "Réduction des risques de fraude et de perte"
+        "Suivi en temps réel des véhicules financés et alertes automatiques",
+        "Détection précoce des comportements anormaux et mouvements suspects",
+        "Rapports d'usage détaillés pour le scoring et le contrôle des risques",
+        "Réduction des fraudes, impayés et pertes financières",
+        "Pilotage multi-pays et multi-agences avec consolidation instantanée"
       ]
     },
     {
       icon: Car,
       title: "Concessionnaires Automobiles",
-      description: "Différenciez-vous avec des services à valeur ajoutée et optimisez vos ateliers.",
+      description: "Renforcez la sécurité de vos parcs et enrichissez votre offre commerciale grâce à des services connectés à forte valeur ajoutée.",
       image: dealershipImage,
       benefits: [
-        "Services connectés premium pour vos clients",
-        "Offre différenciée face à la concurrence",
-        "Données d'usage pour anticiper les besoins d'entretien",
-        "Optimisation des passages en atelier grâce à l'analyse prédictive"
+        "Sécurisation intelligente des stocks neufs et d'occasion",
+        "Démonstrateurs connectés pour vos équipes de vente",
+        "Services GPS intégrés dans vos offres commerciales",
+        "Suivi après-vente simplifié et fidélisation renforcée",
+        "Réduction des vols et usages non autorisés"
       ]
     },
     {
       icon: Factory,
       title: "Grandes Entreprises",
-      description: "Optimisez la gestion de vos flottes avec des outils d'analyse avancée.",
+      description: "Pilotez vos opérations avec précision grâce à une plateforme unifiée qui optimise les coûts, améliore la productivité et renforce la sécurité de vos équipes.",
       image: corporateImage,
       benefits: [
-        "Suivi en temps réel de l'ensemble de votre flotte",
-        "Optimisation des trajets et consommation de carburant",
-        "Amélioration de la productivité et de la sécurité",
-        "Tableaux de bord et rapports personnalisés"
+        "Vision consolidée des flottes multi-sites et multi-pays",
+        "Optimisation des trajets, carburant et coûts d'exploitation",
+        "Suivi de la productivité des équipes terrain",
+        "Amélioration de la sécurité des collaborateurs",
+        "Tableaux de bord et reporting personnalisés"
       ]
     },
     {
       icon: Store,
       title: "TPE & PME",
-      description: "Solutions abordables et simples pour les petites et moyennes entreprises.",
+      description: "Des solutions simples, fiables et abordables pour aider les PME à garder le contrôle sur leurs véhicules et sécuriser leurs opérations au quotidien.",
       image: smeImage,
       benefits: [
-        "Prix adapté aux budgets des PME",
+        "Tarification adaptée aux PME",
         "Installation rapide et formation incluse",
-        "Support en français disponible 24/7",
-        "Évolutivité selon vos besoins"
+        "Suivi en temps réel pour limiter les abus",
+        "Support en français 24/7",
+        "Solution évolutive selon votre croissance"
       ]
     }
   ];
