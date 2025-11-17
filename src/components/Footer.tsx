@@ -29,11 +29,11 @@ const Footer = () => {
             <h4 className="font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-3 text-white/80">
               <li className="hover:text-white transition-colors">
-                <a href="tel:+2250777856011">+225 07 77 85 60 11</a>
+                <a href="tel:+2250748977719">+225 07 48 977 719</a>
               </li>
               <li className="hover:text-white transition-colors">
-                <a href="mailto:c.toue@mappingcontrolafrique.com" className="break-all">
-                  c.toue@mappingcontrolafrique.com
+                <a href="mailto:contact@mappingcontrolafrique.com" className="break-all">
+                  contact@mappingcontrolafrique.com
                 </a>
               </li>
               <li className="text-white/70">Abidjan, Côte d'Ivoire</li>

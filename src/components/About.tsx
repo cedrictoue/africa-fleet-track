@@ -18,7 +18,7 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
               Mapping Control Afrique est née au cœur de l'opérationnel : anciennement filiale Afrique d'Optimum Automotive, l'un des pionniers européens de la télématique, la société est devenue indépendante en 2025.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-lg mb-4">Nous combinons aujourd'hui la puissance des technologies éprouvée avec une expertise africaine unique, construite au fil de plus de 10  années de déploiements terrain dans plus de 25 pays.</p>
+            <p className="text-muted-foreground leading-relaxed text-lg mb-4">Nous combinons aujourd'hui la puissance des technologies éprouvée avec une expertise africaine unique, construite au fil de 15 années de déploiements terrain dans plus de 25 pays.</p>
             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
               Nous accompagnons banques, concessionnaires, groupes industriels, transporteurs, PME et acteurs publics dans la transformation et la sécurisation de leurs flottes, avec une approche résolument orientée résultats : réduction des coûts, amélioration de la productivité, conformité opérationnelle et protection des collaborateurs.
             </p>
@@ -68,10 +68,10 @@ const About = () => {
           value: "20 000+",
           label: "Véhicules actifs suivis"
         }, {
-          value: "5 000+",
-          label: "Interventions & projets complétés"
+          value: "Plus de 10 000",
+          label: "Interventions réalisées ou supervisées / an"
         }, {
-          value: "8+",
+          value: "15",
           label: "Années d'expérience terrain"
         }].map((stat, index) => <div key={index} className="text-center">
               <div className="w-32 h-32 mx-auto rounded-full bg-primary flex items-center justify-center mb-4">
@@ -93,10 +93,10 @@ const About = () => {
             title: "Excellence technologique",
             description: "Nous développons et intégrons des solutions fiables, performantes et capables de répondre aux conditions d'utilisation les plus exigeantes. Notre priorité : garantir précision, stabilité et sécurité pour chaque flotte."
           }, {
-            title: "Proximité & support client premium",
+            title: "Support client premium",
             description: "Plus de 70 % de notre équipe est dédiée au support, au déploiement et à l'accompagnement client. Nous offrons un service réactif, humain, multilingue et parfaitement adapté aux réalités opérationnelles africaines."
           }, {
-            title: "Innovation continue & adaptation locale",
+            title: "Innovation continue",
             description: "Nos solutions évoluent en fonction des usages, des contraintes et des besoins du marché africain : carburant, sécurité, conditions de route, types d'entreprises. Chaque amélioration vise un objectif simple : optimiser, sécuriser et simplifier vos opérations."
           }, {
             title: "Engagement & transparence",

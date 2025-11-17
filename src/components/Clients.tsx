@@ -8,6 +8,19 @@ import smeImage from "@/assets/sme-vehicles.jpg";
 const Clients = () => {
   const clientSegments = [
     {
+      icon: Factory,
+      title: "Grandes Entreprises",
+      description: "Pilotez vos opérations avec précision grâce à une plateforme unifiée qui optimise les coûts, améliore la productivité et renforce la sécurité de vos équipes.",
+      image: corporateImage,
+      benefits: [
+        "Vision consolidée des flottes multi-sites et multi-pays",
+        "Optimisation des trajets, carburant et coûts d'exploitation",
+        "Suivi de la productivité des équipes terrain",
+        "Amélioration de la sécurité des collaborateurs",
+        "Tableaux de bord et reporting personnalisés"
+      ]
+    },
+    {
       icon: Building2,
       title: "Banques & Institutions Financières",
       description: "Sécurisez vos financements automobiles et gardez une visibilité totale sur les véhicules financés ou mis en garantie, partout en Afrique. Nos technologies renforcent votre gestion du risque.",
@@ -31,19 +44,6 @@ const Clients = () => {
         "Services GPS intégrés dans vos offres commerciales",
         "Suivi après-vente simplifié et fidélisation renforcée",
         "Réduction des vols et usages non autorisés"
-      ]
-    },
-    {
-      icon: Factory,
-      title: "Grandes Entreprises",
-      description: "Pilotez vos opérations avec précision grâce à une plateforme unifiée qui optimise les coûts, améliore la productivité et renforce la sécurité de vos équipes.",
-      image: corporateImage,
-      benefits: [
-        "Vision consolidée des flottes multi-sites et multi-pays",
-        "Optimisation des trajets, carburant et coûts d'exploitation",
-        "Suivi de la productivité des équipes terrain",
-        "Amélioration de la sécurité des collaborateurs",
-        "Tableaux de bord et reporting personnalisés"
       ]
     },
     {
