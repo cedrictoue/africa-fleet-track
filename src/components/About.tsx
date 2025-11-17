@@ -88,16 +88,19 @@ const About = () => {
           <h3 className="text-3xl font-bold text-center text-foreground mb-12">
             Nos Valeurs
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[{
             title: "Excellence technologique",
-            description: "Nous utilisons les dernières technologies pour garantir fiabilité et performance."
+            description: "Nous développons et intégrons des solutions fiables, performantes et capables de répondre aux conditions d'utilisation les plus exigeantes. Notre priorité : garantir précision, stabilité et sécurité pour chaque flotte."
           }, {
-            title: "Support client premium",
-            description: "Un accompagnement personnalisé 24h/24 en français pour votre tranquillité."
+            title: "Proximité & support client premium",
+            description: "Plus de 70 % de notre équipe est dédiée au support, au déploiement et à l'accompagnement client. Nous offrons un service réactif, humain, multilingue et parfaitement adapté aux réalités opérationnelles africaines."
           }, {
-            title: "Innovation continue",
-            description: "Nous évoluons constamment pour répondre aux nouveaux besoins du marché africain."
+            title: "Innovation continue & adaptation locale",
+            description: "Nos solutions évoluent en fonction des usages, des contraintes et des besoins du marché africain : carburant, sécurité, conditions de route, types d'entreprises. Chaque amélioration vise un objectif simple : optimiser, sécuriser et simplifier vos opérations."
+          }, {
+            title: "Engagement & transparence",
+            description: "Nous construisons des partenariats durables, basés sur la confiance, la fiabilité et la clarté. Notre engagement : délivrer des résultats mesurables, accompagnés d'un suivi constant."
           }].map((value, index) => <div key={index} className="text-center p-8 bg-card rounded-2xl shadow-lg border border-border">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary flex items-center justify-center">
                   <CheckCircle2 className="w-8 h-8 text-white" />
