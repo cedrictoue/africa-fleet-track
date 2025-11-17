@@ -1,9 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import aboutImage from "@/assets/about-building.jpg";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-muted/30">
+  return <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -20,14 +18,12 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
               Mapping Control Afrique est née au cœur de l'opérationnel : anciennement filiale Afrique d'Optimum Automotive, l'un des pionniers européens de la télématique, la société est devenue indépendante en 2025.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-lg mb-4">
-              Nous combinons aujourd'hui la puissance d'une technologie européenne éprouvée avec une expertise africaine unique, construite au fil de plus de huit années de déploiements terrain dans plus de 25 pays.
-            </p>
+            <p className="text-muted-foreground leading-relaxed text-lg mb-4">Nous combinons aujourd'hui la puissance des technologies éprouvée avec une expertise africaine unique, construite au fil de plus de 10  années de déploiements terrain dans plus de 25 pays.</p>
             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
               Nous accompagnons banques, concessionnaires, groupes industriels, transporteurs, PME et acteurs publics dans la transformation et la sécurisation de leurs flottes, avec une approche résolument orientée résultats : réduction des coûts, amélioration de la productivité, conformité opérationnelle et protection des collaborateurs.
             </p>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Notre force repose sur une équipe locale dédiée, représentant plus de 70 % de nos effectifs : support, opérations, qualité, intégration et accompagnement utilisateurs. C'est ce qui fait de nous un partenaire durable, fiable et proche des réalités quotidiennes.
+              Notre force repose sur une équipe locale dédiée : support, opérations, qualité, intégration et accompagnement utilisateurs. C'est ce qui fait de nous un partenaire durable, fiable et proche des réalités quotidiennes.
             </p>
           </div>
         </div>
@@ -35,11 +31,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left - Image */}
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src={aboutImage} 
-              alt="Mapping Control Afrique" 
-              className="w-full h-[500px] object-cover"
-            />
+            <img src={aboutImage} alt="Mapping Control Afrique" className="w-full h-[500px] object-cover" />
           </div>
 
           {/* Right - Text content */}
@@ -69,21 +61,26 @@ const About = () => {
 
         {/* Stats circles */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: "25+", label: "Pays accompagnés" },
-            { value: "10 000+", label: "Véhicules actifs suivis" },
-            { value: "5 000+", label: "Interventions & projets complétés" },
-            { value: "8+", label: "Années d'expérience terrain" },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
+          {[{
+          value: "25+",
+          label: "Pays accompagnés"
+        }, {
+          value: "10 000+",
+          label: "Véhicules actifs suivis"
+        }, {
+          value: "5 000+",
+          label: "Interventions & projets complétés"
+        }, {
+          value: "8+",
+          label: "Années d'expérience terrain"
+        }].map((stat, index) => <div key={index} className="text-center">
               <div className="w-32 h-32 mx-auto rounded-full bg-primary flex items-center justify-center mb-4">
                 <div>
                   <div className="text-3xl font-bold text-white">{stat.value}</div>
                 </div>
               </div>
               <p className="text-sm font-semibold text-foreground uppercase">{stat.label}</p>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Values section */}
@@ -92,33 +89,25 @@ const About = () => {
             Nos Valeurs
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Excellence technologique",
-                description: "Nous utilisons les dernières technologies pour garantir fiabilité et performance."
-              },
-              {
-                title: "Support client premium",
-                description: "Un accompagnement personnalisé 24h/24 en français pour votre tranquillité."
-              },
-              {
-                title: "Innovation continue",
-                description: "Nous évoluons constamment pour répondre aux nouveaux besoins du marché africain."
-              }
-            ].map((value, index) => (
-              <div key={index} className="text-center p-8 bg-card rounded-2xl shadow-lg border border-border">
+            {[{
+            title: "Excellence technologique",
+            description: "Nous utilisons les dernières technologies pour garantir fiabilité et performance."
+          }, {
+            title: "Support client premium",
+            description: "Un accompagnement personnalisé 24h/24 en français pour votre tranquillité."
+          }, {
+            title: "Innovation continue",
+            description: "Nous évoluons constamment pour répondre aux nouveaux besoins du marché africain."
+          }].map((value, index) => <div key={index} className="text-center p-8 bg-card rounded-2xl shadow-lg border border-border">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary flex items-center justify-center">
                   <CheckCircle2 className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-foreground mb-3">{value.title}</h4>
                 <p className="text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
