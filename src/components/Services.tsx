@@ -6,32 +6,32 @@ const Services = () => {
     {
       icon: MapPin,
       title: "Tracking GPS",
-      description: "Suivi en temps réel de votre flotte avec géolocalisation précise, historique des trajets et alertes intelligentes"
+      description: "Suivi temps réel, historique complet, alertes dynamiques et cartes intelligentes pour un contrôle total de vos déplacements, où que vous soyez."
     },
     {
       icon: Shield,
       title: "Sécurisation",
-      description: "Protection avancée avec blocage moteur à distance, alertes anti-vol et zones de sécurité personnalisées"
+      description: "Sécurité renforcée : anti-vol avancé, immobilisation moteur à distance, zones de sécurité personnalisées et alertes critiques instantanées."
     },
     {
       icon: BarChart3,
       title: "Fleet Management",
-      description: "Optimisation complète de la gestion avec tableaux de bord, rapports détaillés et analyses de performance"
+      description: "Un pilotage complet : tableaux de bord sur mesure, rapports automatiques, analyse des coûts, KPI de performance et notifications proactives."
     },
     {
       icon: Video,
       title: "Vidéo Embarquée",
-      description: "Caméras HD intelligentes avec enregistrement continu, détection d'événements et accès à distance"
+      description: "Caméras HD intelligentes avec détection d’événements, enregistrement continu, coaching conducteur et accès cloud en temps réel."
     },
     {
       icon: Wrench,
       title: "Suivi d'Entretien",
-      description: "Planification automatique des maintenances, alertes préventives et suivi complet de l'historique"
+      description: "Planification automatique des maintenances, alertes préventives, historique centralisé et optimisation du coût de possession (TCO)."
     },
     {
       icon: Headphones,
       title: "Support Dédié",
-      description: "Accompagnement personnalisé 24/7 en français avec formation complète et assistance technique"
+      description: "Une équipe experte, locale et multilingue, disponible en continu pour accompagner vos utilisateurs, techniciens et équipes terrain."
     }
   ];
 

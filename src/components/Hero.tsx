@@ -39,7 +39,7 @@ const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-muted-foreground">
-              Sécurisez et optimisez votre flotte grâce à nos technologies GPS, vidéos embarquées et outils d'analyse avancée.
+            Prenez une longueur d’avance. Optimisez, sécurisez et pilotez vos opérations grâce à nos technologies GPS, nos vidéos embarquées intelligentes et nos outils d’analyse professionnels.
             </p>
 
             {/* CTA buttons */}
@@ -49,7 +49,7 @@ const Hero = () => {
                 onClick={scrollToContact}
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-6 text-lg shadow-lg"
               >
-                Demander une Démo
+                Demander une démonstration
               </Button>
               <Button
                 size="lg"
