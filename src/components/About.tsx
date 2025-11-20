@@ -8,22 +8,28 @@ const About = () => {
             À Propos de Mapping Control Afrique
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Leader africain des solutions de gestion de flottes connectées
+           Leader Africain de la Mobilité Connectée
           </p>
         </div>
 
         {/* Main paragraph */}
         <div className="max-w-5xl mx-auto mb-16">
           <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
-            <p className="text-muted-foreground leading-relaxed text-lg mb-4">
-              Mapping Control Afrique est née au cœur de l'opérationnel : anciennement filiale Afrique d'Optimum Automotive, l'un des pionniers européens de la télématique, la société est devenue indépendante en 2025.
+            <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+              Mapping Control Afrique est née sur le terrain, au cœur de l'opérationnel. Forte de 15 années d'expertise et d'implantations dans plus de 25 pays, notre mission est simple : offrir aux entreprises africaines des solutions technologiques fiables, adaptées aux réalités du continent et orientées résultats.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-lg mb-4">Nous combinons aujourd'hui la puissance des technologies éprouvée avec une expertise africaine unique, construite au fil de 15 années de déploiements terrain dans plus de 25 pays.</p>
             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
-              Nous accompagnons banques, concessionnaires, groupes industriels, transporteurs, PME et acteurs publics dans la transformation et la sécurisation de leurs flottes, avec une approche résolument orientée résultats : réduction des coûts, amélioration de la productivité, conformité opérationnelle et protection des collaborateurs.
+              Nous accompagnons chaque jour banques, industriels, transporteurs, distributeurs, PME et acteurs publics dans :
             </p>
+            <ul className="text-muted-foreground leading-relaxed text-lg mb-6 space-y-2 ml-6 list-disc">
+              <li>la réduction des coûts,</li>
+              <li>l'amélioration de la productivité,</li>
+              <li>la sécurité de leurs équipes,</li>
+              <li>la conformité opérationnelle,</li>
+              <li>et la transformation digitale de leurs activités.</li>
+            </ul>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Notre force repose sur une équipe locale dédiée : support, opérations, qualité, intégration et accompagnement utilisateurs. C'est ce qui fait de nous un partenaire durable, fiable et proche des réalités quotidiennes.
+              Notre atout majeur : une équipe locale engagée, experte et réactive, qui connaît parfaitement les environnements africains et les enjeux du terrain.
             </p>
           </div>
         </div>
@@ -41,7 +47,7 @@ const About = () => {
                 Notre Mission
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Permettre aux décideurs africains d'améliorer la performance, la sécurité et la visibilité de leurs flottes grâce à des solutions fiables, évolutives et adaptées aux conditions réelles du terrain. Nous transformons la gestion de flotte en un avantage stratégique.
+              Aider les décideurs à transformer la gestion de flotte en un avantage stratégique, grâce à des technologies fiables, une expertise locale et un accompagnement durable.
               </p>
             </div>
 
@@ -49,12 +55,19 @@ const About = () => {
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 Notre Différence
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Des technologies enrichies par une connaissance approfondie des usages africains : déploiements multi-pays, formations multilingues, support local réactif et capacité d'adaptation terrain.
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Nous ne livrons pas une simple plateforme.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Nous ne vendons pas une plateforme : nous accompagnons nos clients sur la durée, avec engagement et transparence.
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Nous construisons un partenariat : humain, durable et orienté performance.
               </p>
+              <ul className="text-muted-foreground leading-relaxed space-y-2 ml-6 list-disc">
+                <li>Expertise africaine éprouvée</li>
+                <li>Support local multilingue 24/7</li>
+                <li>Déploiements complexes multi-pays</li>
+                <li>Solutions évolutives et adaptées aux réalités opérationnelles</li>
+                <li>Engagement total sur la qualité et les résultats</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -91,16 +104,16 @@ const About = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[{
             title: "Excellence technologique",
-            description: "Nous développons et intégrons des solutions fiables, performantes et capables de répondre aux conditions d'utilisation les plus exigeantes. Notre priorité : garantir précision, stabilité et sécurité pour chaque flotte."
+            description: "Nous intégrons les meilleures technologies du marché pour garantir précision, stabilité et sécurité, même dans les environnements les plus exigeants."
           }, {
             title: "Support client premium",
-            description: "Plus de 70 % de notre équipe est dédiée au support, au déploiement et à l'accompagnement client. Nous offrons un service réactif, humain, multilingue et parfaitement adapté aux réalités opérationnelles africaines."
+            description: "70 % de notre équipe est dédiée au support, à la qualité et à l'accompagnement utilisateur. Nous offrons un service réactif, humain et adapté au terrain."
           }, {
             title: "Innovation continue",
-            description: "Nos solutions évoluent en fonction des usages, des contraintes et des besoins du marché africain : carburant, sécurité, conditions de route, types d'entreprises. Chaque amélioration vise un objectif simple : optimiser, sécuriser et simplifier vos opérations."
+            description: "Nous faisons évoluer nos solutions en fonction des usages, du climat, des réseaux, des routes, des besoins sectoriels et des contraintes africaines."
           }, {
-            title: "Engagement & transparence",
-            description: "Nous construisons des partenariats durables, basés sur la confiance, la fiabilité et la clarté. Notre engagement : délivrer des résultats mesurables, accompagnés d'un suivi constant."
+            title: "Engagement & Transparence",
+            description: "Nous privilégions une relation de confiance basée sur la proximité, la clarté, la responsabilité et des résultats mesurables."
           }].map((value, index) => <div key={index} className="text-center p-8 bg-card rounded-2xl shadow-lg border border-border">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary flex items-center justify-center">
                   <CheckCircle2 className="w-8 h-8 text-white" />

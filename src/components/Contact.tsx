@@ -20,6 +20,22 @@ const Contact = () => {
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
+  const handleScheduleDemo = () => {
+    // Créer un lien Google Calendar pour planifier une démo
+    const title = encodeURIComponent("Démo Mapping Control Afrique");
+    const details = encodeURIComponent(
+      "Démonstration personnalisée de nos solutions de gestion de flottes connectées.\n\n" +
+      "Nous vous présenterons comment nos solutions peuvent transformer la gestion de votre flotte."
+    );
+    const location = encodeURIComponent("Abidjan, Côte d'Ivoire");
+    const dates = ""; // Laisser vide pour que l'utilisateur choisisse la date
+    
+    // URL Google Calendar - ouvre le calendrier avec un événement pré-rempli
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}`;
+    
+    window.open(googleCalendarUrl, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 bg-background relative overflow-hidden">
       {/* Background Africa map */}
@@ -107,7 +123,10 @@ const Contact = () => {
                   Découvrez comment nos solutions peuvent transformer la gestion de votre flotte.
                   Contactez-nous pour planifier une démonstration personnalisée et gratuite.
                 </p>
-                <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
+                <Button 
+                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
+                  onClick={handleScheduleDemo}
+                >
                   Planifier une Démo
                 </Button>
               </div>
