@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import { Facebook, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,9 +11,29 @@ const Footer = () => {
             <p className="text-white/90 text-lg font-medium mb-4">
               Mapping Control Afrique
             </p>
-            <p className="text-white/70 text-base leading-relaxed">
+            <p className="text-white/70 text-base leading-relaxed mb-6">
               Leader de la gestion de flottes connectées en Afrique
             </p>
+            <div className="flex gap-4">
+              <a 
+                href="https://www.linkedin.com/company/mapping-control-afrique1/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="Suivez-nous sur LinkedIn"
+              >
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://www.facebook.com/MappingControlAfrique" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="Suivez-nous sur Facebook"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
+            </div>
           </div>
 
           <div>
