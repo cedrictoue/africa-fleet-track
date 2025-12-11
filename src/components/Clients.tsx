@@ -10,50 +10,50 @@ const Clients = () => {
     {
       icon: Factory,
       title: "Grandes Entreprises",
-      description: "Pilotez vos opérations avec précision grâce à une plateforme unifiée qui optimise les coûts, améliore la productivité et renforce la sécurité de vos équipes.",
+      description: "Optimisez vos opérations multi-sites et multi-pays avec une plateforme unifiée, des indicateurs consolidés et un pilotage stratégique pensé pour les équipes exigeantes.",
       image: corporateImage,
       benefits: [
-        "Vision consolidée des flottes multi-sites et multi-pays",
-        "Optimisation des trajets, carburant et coûts d'exploitation",
+        "Vision globale des flottes",
+        "Réduction des coûts d’exploitation",
         "Suivi de la productivité des équipes terrain",
-        "Amélioration de la sécurité des collaborateurs",
-        "Tableaux de bord et reporting personnalisés"
+        "Sécurité accrue des collaborateurs",
+        "Reporting sur mesure pour la direction"
       ]
     },
     {
       icon: Building2,
       title: "Banques & Institutions Financières",
-      description: "Sécurisez vos financements automobiles et gardez une visibilité totale sur les véhicules financés ou mis en garantie, partout en Afrique. Nos technologies renforcent votre gestion du risque.",
+      description: "Sécurisez vos financements automobiles et maîtrisez vos risques grâce à une visibilité totale sur les véhicules financés.",
       image: bankImage,
       benefits: [
-        "Suivi en temps réel des véhicules financés et alertes automatiques",
-        "Détection précoce des comportements anormaux et mouvements suspects",
-        "Rapports d'usage détaillés pour le scoring et le contrôle des risques",
-        "Réduction des fraudes, impayés et pertes financières",
-        "Pilotage multi-pays et multi-agences avec consolidation instantanée"
+        "Suivi en temps réel",
+        "Analyse des comportements suspects",
+        "Scoring d’usage automatisé",
+        "Réduction des impayés et des fraudes"
       ]
     },
     {
       icon: Car,
       title: "Concessionnaires Automobiles",
-      description: "Renforcez la sécurité de vos parcs et enrichissez votre offre commerciale grâce à des services connectés à forte valeur ajoutée.",
+      description: "Proposez une nouvelle valeur ajoutée à vos clients grâce à des services connectés intégrés à vos offres.",
       image: dealershipImage,
       benefits: [
-        "Services GPS intégrés dans vos offres commerciales",
-        "Suivi après-vente simplifié et fidélisation renforcée",
-        "Réduction des vols et usages non autorisés"
+        "Services GPS packagés",
+        "Suivi après-vente intelligent",
+        "Protection de vos parcs",
+        "Fidélisation renforcée"
       ]
     },
     {
       icon: Store,
       title: "TPE & PME",
-      description: "Des solutions simples, fiables et abordables pour aider les PME à garder le contrôle sur leurs véhicules et sécuriser leurs opérations au quotidien.",
+      description: "Des solutions fiables, abordables et évolutives pour garder un contrôle total sur vos opérations quotidiennes.",
       image: smeImage,
       benefits: [
-        "Installation rapide et formation incluse",
-        "Suivi en temps réel pour limiter les abus",
-        "Support en français/anglais  24/7",
-        "Solution évolutive selon votre croissance"
+        "Installation rapide",
+        "Suivi temps réel intuitif",
+        "Support 24/7 en français/anglais",
+        "Solution scalable selon votre croissance"
       ]
     }
   ];
@@ -74,18 +74,17 @@ const Clients = () => {
           {clientSegments.map((segment, index) => {
             const Icon = segment.icon;
             const isEven = index % 2 === 0;
-            
+
             return (
               <div
                 key={index}
-                className={`flex flex-col ${
-                  isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                } gap-8 items-center bg-card rounded-2xl overflow-hidden shadow-lg border border-border`}
+                className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                  } gap-8 items-center bg-card rounded-2xl overflow-hidden shadow-lg border border-border`}
               >
                 {/* Image */}
                 <div className="flex-1">
-                  <img 
-                    src={segment.image} 
+                  <img
+                    src={segment.image}
                     alt={segment.title}
                     className="w-full h-80 object-cover"
                   />
@@ -101,7 +100,7 @@ const Clients = () => {
                       {segment.title}
                     </h3>
                   </div>
-                  
+
                   <p className="text-muted-foreground mb-6">
                     {segment.description}
                   </p>
@@ -115,7 +114,7 @@ const Clients = () => {
                     ))}
                   </div>
 
-                  <Button 
+                  <Button
                     className="mt-6 bg-primary hover:bg-primary/90 text-white"
                     onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                   >

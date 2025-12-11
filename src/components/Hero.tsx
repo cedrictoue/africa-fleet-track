@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Shield, BarChart3 } from "lucide-react";
+import LiveMap from "@/components/LiveMap";
 import logo from "@/assets/logo.png";
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231E88E5' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}/>
+        }} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -39,7 +39,7 @@ const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-muted-foreground">
-            Prenez une longueur d’avance. Optimisez, sécurisez et pilotez vos opérations grâce à nos technologies GPS, nos vidéos embarquées intelligentes et nos outils d’analyse professionnels.
+              Prenez une longueur d’avance. Optimisez, sécurisez et pilotez vos opérations grâce à nos technologies GPS, nos vidéos embarquées intelligentes et nos outils d’analyse professionnels.
             </p>
 
             {/* CTA buttons */}
@@ -64,16 +64,7 @@ const Hero = () => {
 
           {/* Right: Visual */}
           <div className="relative hidden lg:block">
-            <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              {/* Placeholder for 3D illustration or photo */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <MapPin className="w-32 h-32 text-primary mx-auto animate-pulse" />
-                  <p className="text-2xl font-bold text-foreground">Véhicules Connectés</p>
-                  <p className="text-muted-foreground">Visualisation en temps réel</p>
-                </div>
-              </div>
-            </div>
+            <LiveMap />
           </div>
         </div>
       </div>
