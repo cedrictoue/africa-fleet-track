@@ -1,108 +1,109 @@
 
-import { Car, MapPin } from "lucide-react";
+import { Plus, Minus, Maximize } from "lucide-react";
+import mapBackground from "@/assets/map-background.png";
+import carIcon from "@/assets/car-icon.png";
+
+const CarMarker = ({ label, showPulse }) => (
+    <div className="relative">
+        {showPulse && (
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-24 h-24 bg-blue-500/20 rounded-full animate-ping absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                <div className="w-16 h-16 bg-blue-500/30 rounded-full animate-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+            </div>
+        )}
+        <div className="relative z-10 w-20 h-20 -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-110 cursor-pointer">
+            <img src={carIcon} alt="Car" className="w-full h-full object-contain drop-shadow-lg" />
+        </div>
+        <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-white px-2 py-1 rounded shadow text-xs font-bold text-slate-700 whitespace-nowrap z-20">
+            {label}
+        </div>
+    </div>
+);
 
 const LiveMap = () => {
     return (
-        <div className="relative w-full h-[500px] bg-[#e5e7eb] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 font-sans">
-            {/* Google-like Map Background */}
-            <div className="absolute inset-0 bg-[#f8f9fa]">
+        <div className="relative w-full h-[500px] bg-slate-100 rounded-xl overflow-hidden shadow-xl border border-gray-200 group">
 
-                {/* Water / River */}
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-[#aadaff] transform -skew-x-12 origin-top-right border-l-4 border-[#9acdf9]" />
+            {/* Map Layer - Zoomed */}
+            <div className="absolute inset-0 transform scale-125 origin-center">
+                <img src={mapBackground} alt="Map" className="w-full h-full object-cover opacity-90" />
 
-                {/* Parks */}
-                <div className="absolute top-[10%] left-[10%] w-32 h-32 bg-[#c6e6c6] rounded-full opacity-60 mix-blend-multiply" />
-                <div className="absolute bottom-[20%] right-[30%] w-48 h-48 bg-[#c6e6c6] rounded-full opacity-60 mix-blend-multiply" />
+                {/* --- Vehicles Following Visual Roads --- */}
 
-                {/* Roads Container for SVG */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                    {/* Defs for gradients or styles */}
-                    <defs>
-                        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                            <feDropShadow dx="1" dy="1" stdDeviation="1" floodColor="#000" floodOpacity="0.2" />
-                        </filter>
-                    </defs>
-
-                    {/* Main Roads - Thick Yellow/Orange */}
-                    <polyline points="0,400 200,350 400,350 500,100" fill="none" stroke="#fbd354" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round" />
-                    <polyline points="150,500 200,350 250,150 250,0" fill="none" stroke="#fbd354" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round" />
-
-                    {/* Connecting Roads - White */}
-                    <polyline points="0,200 150,200 250,150 400,150 600,200" fill="none" stroke="white" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-                    <polyline points="400,350 400,500" fill="none" stroke="white" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-
-                </svg>
-
-                {/* Vehicle 1 - Following Path - Main Route */}
-                <div className="absolute w-8 h-8 z-10" style={{
-                    offsetPath: "path('M0,400 L200,350 L400,350 L500,100')",
-                    animation: "followPath 10s linear infinite alternate"
-                }}>
-                    <div className="relative -ml-4 -mt-4 transform rotate-90"> {/* Adjust rotation if needed */}
-                        <div className="bg-blue-600 p-1.5 rounded-full shadow-lg border-2 border-white">
-                            <Car className="w-5 h-5 text-white" />
-                        </div>
-                        {/* Tooltip */}
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-[10px] font-bold px-2 py-0.5 rounded shadow text-gray-700 whitespace-nowrap">
-                            Fleet #042
-                        </div>
-                    </div>
+                {/* 1. Highway Curve (Right side - South to North) */}
+                {/* Traces the big curved road on the right */}
+                <div className="absolute w-0 h-0" style={{ animation: "routeHighway 20s linear infinite" }}>
+                    <CarMarker label="Convoi #12" showPulse={true} />
                 </div>
 
-                {/* Vehicle 2 - North South Route */}
-                <div className="absolute w-8 h-8 z-10" style={{
-                    offsetPath: "path('M150,500 L200,350 L250,150 L250,0')",
-                    animation: "followPath 14s linear infinite"
-                }}>
-                    <div className="relative -ml-4 -mt-4">
-                        <div className="bg-green-600 p-1.5 rounded-full shadow-lg border-2 border-white">
-                            <Car className="w-5 h-5 text-white" />
-                        </div>
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-[10px] font-bold px-2 py-0.5 rounded shadow text-gray-700 whitespace-nowrap">
-                            Delivery #09
-                        </div>
-                    </div>
+                {/* 2. Main Avenue (West to East) */}
+                <div className="absolute w-0 h-0" style={{ animation: "routeAvenue 18s linear infinite" }}>
+                    <CarMarker label="Navette #03" />
                 </div>
 
-                {/* Vehicle 3 - East West */}
-                <div className="absolute w-8 h-8 z-10" style={{
-                    offsetPath: "path('M0,200 L150,200 L250,150 L400,150 L600,200')",
-                    animation: "followPath 12s linear infinite reverse"
-                }}>
-                    <div className="relative -ml-4 -mt-4">
-                        <div className="bg-orange-600 p-1.5 rounded-full shadow-lg border-2 border-white">
-                            <Car className="w-5 h-5 text-white" />
-                        </div>
-                    </div>
+                {/* 3. Vertical Street (Top Left to Bottom Left) */}
+                <div className="absolute w-0 h-0" style={{ animation: "routeVertical 25s linear infinite" }}>
+                    <CarMarker label="Diagnostic" />
                 </div>
 
+                {/* 4. Bridge Entry (Bottom Right) */}
+                <div className="absolute w-0 h-0" style={{ animation: "routeBridge 15s linear infinite" }}>
+                    <CarMarker label="Patrouille" />
+                </div>
 
-                {/* POI Markers */}
-                <div className="absolute top-[28%] left-[45%] text-red-500 hover:-translate-y-1 transition-transform cursor-pointer">
-                    <MapPin className="w-8 h-8 drop-shadow-md" fill="currentColor" />
-                    <span className="absolute top-full left-1/2 -translate-x-1/2 text-xs font-bold text-gray-600 bg-white/80 px-1 rounded">HQ</span>
+                {/* 5. Inner City Loop */}
+                <div className="absolute w-0 h-0" style={{ animation: "routeCity 30s linear infinite" }}>
+                    <CarMarker label="Superviseur" />
                 </div>
 
             </div>
 
-            {/* Map UI Overlay */}
-            <div className="absolute top-4 left-4 z-20 flex gap-2">
-                <button className="bg-white text-gray-600 px-3 py-1.5 rounded shadow text-sm font-medium hover:bg-gray-50 border border-gray-200">Plan</button>
-                <button className="bg-white text-gray-400 px-3 py-1.5 rounded shadow text-sm font-medium hover:bg-gray-50 border border-gray-200">Satellite</button>
+            {/* UI Controls */}
+            <div className="absolute top-3 left-3 flex bg-white rounded shadow border border-gray-300 overflow-hidden">
+                <button className="px-3 py-1 text-xs font-semibold text-gray-700 hover:bg-gray-50 border-r">Plan</button>
+                <button className="px-3 py-1 text-xs font-semibold text-gray-500 hover:bg-gray-50">Satellite</button>
+            </div>
+            <div className="absolute bottom-4 right-3 flex flex-col bg-white rounded shadow border border-gray-300">
+                <button className="p-2 border-b hover:bg-gray-50"><Plus className="w-4 h-4 text-gray-600" /></button>
+                <button className="p-2 hover:bg-gray-50"><Minus className="w-4 h-4 text-gray-600" /></button>
             </div>
 
-            <div className="absolute bottom-6 right-4 z-20 flex flex-col gap-2">
-                <div className="bg-white p-2 rounded shadow border border-gray-200 hover:bg-gray-50 cursor-pointer text-gray-600 font-bold text-center w-10">+</div>
-                <div className="bg-white p-2 rounded shadow border border-gray-200 hover:bg-gray-50 cursor-pointer text-gray-600 font-bold text-center w-10">-</div>
-            </div>
-
-            {/* Global CSS for Path Animation */}
             <style>{`
-        @keyframes followPath {
-            0% { offset-distance: 0%; }
-            100% { offset-distance: 100%; }
-        }
-      `}</style>
+                /* Interpolated coordinates to match visual roads */
+                
+                @keyframes routeHighway {
+                    0% { top: 100%; left: 80%; }
+                    25% { top: 75%; left: 75%; }
+                    50% { top: 50%; left: 78%; }
+                    75% { top: 25%; left: 70%; }
+                    100% { top: 0%; left: 55%; }
+                }
+
+                @keyframes routeAvenue {
+                    0% { top: 45%; left: 0%; }
+                    40% { top: 42%; left: 40%; }
+                    60% { top: 40%; left: 60%; }
+                    100% { top: 35%; left: 100%; }
+                }
+
+                @keyframes routeVertical {
+                    0% { top: 0%; left: 25%; }
+                    100% { top: 100%; left: 15%; }
+                }
+                
+                @keyframes routeBridge {
+                    0% { top: 100%; left: 100%; }
+                    100% { top: 70%; left: 70%; }
+                }
+                
+                @keyframes routeCity {
+                    0% { top: 30%; left: 30%; }
+                    25% { top: 30%; left: 50%; }
+                    50% { top: 60%; left: 50%; }
+                    75% { top: 60%; left: 30%; }
+                    100% { top: 30%; left: 30%; }
+                }
+            `}</style>
         </div>
     );
 };
